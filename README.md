@@ -1,8 +1,6 @@
 **Node.js Performance Profiler**
 
 ---
-# UPCOMING PROJECT.....
-
 
 ### Description
 
@@ -34,6 +32,12 @@ const PerformanceProfiler = require("nodejs-performance-profiler");
 const profiler = new PerformanceProfiler();
 
 // Perform operations to profile
+const memoryUsage = profiler.getMemoryUsage();
+const cpuUsage = profiler.getCpuUsage();
+const upTime = profiler.getUpTime();
+
+// console results
+console.log(memoryUsage, cpuUsage, upTime);
 
 // Log profiling results to a file
 profiler.logResults("performance.txt");
@@ -46,10 +50,9 @@ profiler.logResults("performance.txt");
 - `getUpTime()` (string): Returns the elapsed time since the profiler was initialized.
 - `logResults(filename)` : Logs performance metrics to the specified file. If no filename is provided, it defaults to "performance.txt".
 
-<!-- ## Dependencies
+## Contributing
 
-- [Puppeteer](https://www.npmjs.com/package/puppeteer): Headless browser automation library.
-- [Cheerio](https://www.npmjs.com/package/cheerio): Fast, flexible, and lean implementation of core jQuery for the server. -->
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## License
 

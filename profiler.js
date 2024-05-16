@@ -4,9 +4,14 @@ const fs = require("fs");
 
 class PerformanceProfiler {
   constructor() {
+    // Initialize the start time for performance measurement
     this.startTime = process.hrtime();
   }
 
+  /**
+   * Get memory usage statistics.
+   * @returns {string[]} Array of memory usage details for different keys (e.g., heapUsed, rss).
+   */
   getMemoryUsage() {
     const used = process.memoryUsage();
     const memoryUsage = [];
@@ -18,15 +23,27 @@ class PerformanceProfiler {
     return memoryUsage;
   }
 
+  /**
+   * Get CPU usage information.
+   * @returns {string} CPU usage details (load average).
+   */
   getCpuUsage() {
     return `CPU Usage: ${os.loadavg()}`;
   }
 
+  /**
+   * Calculate elapsed time since the start.
+   * @returns {string} Elapsed time in seconds and milliseconds.
+   */
   getUpTime() {
     const elapsedTime = process.hrtime(this.startTime);
     return `Elapsed Time: ${elapsedTime[0]} s ${elapsedTime[1] / 1000000} ms`;
   }
 
+  /**
+   * Log performance results to a file.
+   * @param {string} filename - Name of the log file (default: "performance.txt").
+   */
   logResults(filename = "performance.txt") {
     const results = [
       `Logged Time: ${new Date().toISOString()}`,
