@@ -23,7 +23,20 @@ npm install nodejs-performance-profiler
 
 ## Usage
 
-Element Scraper provides a simple interface for scraping text from HTML elements on a web page.
+1. **Importing the Library**:
+   First, import the `nodejs-performance-profiler` library into your Node.js application.
+
+2. **Initializing the Profiler**:
+   Create a new instance of the `PerformanceProfiler` class to begin profiling.
+
+3. **Performing Operations to Profile**:
+   Use the profiler instance to retrieve performance metrics such as memory usage, CPU usage, and uptime.
+
+4. **Logging Results**:
+   Log the obtained performance metrics to the console for real-time monitoring or debugging purposes.
+
+5. **Logging to a File**:
+   Optionally, log the profiling results to a file named "performance.txt" for detailed analysis and optimization.
 
 ```javascript
 const PerformanceProfiler = require("nodejs-performance-profiler");
