@@ -27,16 +27,17 @@ class PerformanceProfiler {
     return `Elapsed Time: ${elapsedTime[0]} s ${elapsedTime[1] / 1000000} ms`;
   }
 
-  logResults(filename = 'performance.txt') {
+  logResults(filename = "performance.txt") {
     const results = [
       `Logged Time: ${new Date().toISOString()}`,
       ...this.getMemoryUsage(),
       this.getCpuUsage(),
       this.getUpTime(),
+      "\n", // Add a newline character for better readability
     ];
-    fs.writeFile(filename, results.join('\n'), (err) => {
+    fs.appendFile(filename, results.join("\n"), (err) => {
       if (err) {
-        console.error('An error occurred:', err);
+        console.error("An error occurred:", err);
       } else {
         console.log(`Results were successfully logged to ${filename}`);
       }

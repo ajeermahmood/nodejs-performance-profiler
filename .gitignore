@@ -27,3 +27,6 @@ Thumbs.db
 *.ntvs*
 *.njsproj
 *.sln
+
+# log file
+performance.txt
