@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-performance-profiler",
+  "version": "1.0.0",
+  "description": "A simple performance profiling package for Node.js applications.",
+  "main": "profiler.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajeermahmood/nodejs-performance-profiler.git"
+  },
+  "keywords": [
+    "performance",
+    "profiler",
+    "node.js",
+    "cpu",
+    "memory",
+    "uptime"
+  ],
+  "author": "Ajeer Mohammed",
+  "license": "MIT",
+  "dependencies": {
+    "os": "^0.1.1",
+    "process": "^0.11.10"
+  }
+}
